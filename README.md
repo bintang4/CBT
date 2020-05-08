@@ -1,5 +1,5 @@
 # CBT
 CBT Arbitrary File Upload
 ```
-$ php tools.php
+$ php tools.php list.txt
 ```
